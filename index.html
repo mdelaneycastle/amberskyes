@@ -64,49 +64,50 @@
         }
 
         @media (max-width: 768px) {
-            header {
-                flex-direction: column; /* Stack elements */
-                align-items: center; /* Center align elements */
-                text-align: center;
-                padding: 20px;
-            }
+    header {
+        flex-direction: column; /* Stack logo and menu toggle */
+        align-items: center; /* Center everything */
+        text-align: center;
+        padding: 20px 0; /* Adjust padding for mobile view */
+    }
 
-            header img {
-                margin: 0; /* Center logo for mobile view */
-            }
+    header img {
+        margin: 0; /* Remove margin to perfectly center the logo */
+    }
 
-            #menu-toggle {
-                display: block; /* Show burger menu in mobile view */
-                margin-bottom: 10px;
-            }
+    #menu-toggle {
+        display: block; /* Ensure burger icon is visible */
+        margin: 10px 0; /* Add some space below the icon */
+    }
 
-            nav {
-                display: none; /* Hide navigation menu by default */
-                flex-direction: column;
-                gap: 15px;
-                align-items: center;
-                width: 100%;
-                background: white;
-                padding: 10px 0;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-                border-radius: 5px;
-            }
+    nav {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        width: 100%; /* Full width to ensure centering */
+        background: white;
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+    }
 
-            nav.show {
-                display: flex; /* Show navigation menu when toggled */
-            }
+    nav.show {
+        display: flex; /* Show menu when toggled */
+    }
 
-            nav a {
-                width: 100%;
-                text-align: center;
-                padding: 10px 0;
-                border-bottom: 1px solid #f0f0f0;
-            }
+    nav a {
+        width: 100%; /* Make links full width */
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
 
-            nav a:last-child {
-                border-bottom: none; /* Remove border from last item */
-            }
-        }
+    nav a:last-child {
+        border-bottom: none; /* Remove border from last item */
+    }
+}
+
 
         /* Body header styles */
         .body-header {

@@ -18,23 +18,59 @@
             min-height: 100vh;
         }
 
-        /* Header styles */
+        /* Sticky header styles */
         header {
-            text-align: center;
-            padding: 20px 10px;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
             background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
         }
 
-        header h1 {
+        header img {
+            height: 50px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #5a5a5a;
+            font-family: 'Petrona', serif;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f2bcbc; /* Slightly darker pastel */
+        }
+
+        /* Body header styles */
+        .body-header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .body-header h1 {
             font-size: 36px;
             font-family: 'Arial', sans-serif; /* San-serif font for header */
             margin: 0;
         }
 
-        header p {
+        .body-header p {
             font-size: 18px;
             font-family: 'Arial', sans-serif; /* San-serif font for tagline */
-            margin: 5px 0 0 0;
+            margin: 10px 0 0 0;
         }
 
         /* Main styles */
@@ -72,11 +108,22 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
+    <!-- Sticky header -->
     <header>
+        <img src="pink-website-logo-1.png" alt="Amber Sykes Art Logo">
+        <nav>
+            <a href="about.html">About</a>
+            <a href="artwork.html">Artwork</a>
+            <a href="contact.html">Contact</a>
+            <a href="reviews.html">Reviews</a>
+        </nav>
+    </header>
+
+    <!-- Body header -->
+    <div class="body-header">
         <h1>Amber Sykes</h1>
         <p>UK-based abstract artist, Amber Sykes, is inspired by the beauty of authentic expression.</p>
-    </header>
+    </div>
 
     <!-- Main content -->
     <main>

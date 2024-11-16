@@ -7,65 +7,86 @@
     <title>Amber Sykes Art</title>
     <style>
         /* General styles */
-        body {
-            font-family: 'Petrona', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff; /* White background */
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+body {
+    font-family: 'Petrona', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* White background */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-        /* Sticky header styles */
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 40px;
-            background-color: #ffffff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            width: 100%;
-        }
+/* Sticky header styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 100%;
+}
 
-        header img {
-            height: 100px;
-            margin-left: 100px; /* Logo margin */
-        }
+header img {
+    height: 100px;
+    margin-left: 100px; /* Logo margin */
+}
 
-        nav {
-            display: flex;
-            gap: 30px; /* Space between menu items */
-            margin-right: 100px; /* Nav bar margin on the web version */
-        }
+nav {
+    display: flex;
+    gap: 30px; /* Space between menu items */
+    margin-right: 100px; /* Nav bar margin for the web version */
+}
 
-        nav a {
-            text-decoration: none;
-            color: #333333; /* Default text color */
-            font-family: 'Petrona', serif;
-            font-weight: bold;
-            font-size: 30px;
-        }
+nav a {
+    text-decoration: none;
+    color: #333333; /* Default text color */
+    font-family: 'Petrona', serif;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
 
-        nav a:hover {
-            color: #ff007f; /* Bright pink */
-        }
+/* Hover effects */
+nav a:hover {
+    color: #ff007f; /* Bright pink */
+}
 
-        /* Burger menu styles */
-        #menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: #333;
-        }
+nav a span {
+    display: inline-block;
+    transition: color 0.5s ease;
+}
 
-        @media (max-width: 768px) {
+/* Gradual hover transition */
+nav a:hover span:nth-child(1) { transition-delay: 0s; }
+nav a:hover span:nth-child(2) { transition-delay: 0.1s; }
+nav a:hover span:nth-child(3) { transition-delay: 0.2s; }
+nav a:hover span:nth-child(4) { transition-delay: 0.3s; }
+nav a:hover span:nth-child(5) { transition-delay: 0.4s; }
+nav a:hover span:nth-child(6) { transition-delay: 0.5s; }
+nav a:hover span:nth-child(7) { transition-delay: 0.6s; }
+nav a:hover span:nth-child(8) { transition-delay: 0.7s; }
+
+/* Burger menu styles */
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
     header {
-        flex-direction: column; /* Stack logo and menu toggle */
+        flex-direction: column; /* Stack elements */
         align-items: center; /* Center everything */
         text-align: center;
         padding: 20px 0; /* Adjust padding for mobile view */
@@ -76,7 +97,7 @@
     }
 
     #menu-toggle {
-        display: block; /* Ensure burger icon is visible */
+        display: block; /* Show burger menu in mobile view */
         margin: 10px 0; /* Add some space below the icon */
     }
 
@@ -90,7 +111,6 @@
         padding: 10px 0;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         border-radius: 5px;
-        margin-left:100px;
     }
 
     nav.show {
@@ -102,7 +122,6 @@
         text-align: center;
         padding: 10px 0;
         border-bottom: 1px solid #f0f0f0;
-        font-size: 18px;
     }
 
     nav a:last-child {
@@ -110,60 +129,59 @@
     }
 }
 
+/* Body header styles */
+.body-header {
+    text-align: center;
+    padding: 40px 20px;
+    margin: 20px auto;
+}
 
-        /* Body header styles */
-        .body-header {
-            text-align: center;
-            padding: 40px 20px;
-            margin: 20px auto;
-        }
+.body-header h1 {
+    font-size: 36px;
+    color: #333333; /* Dark text */
+    margin: 0;
+}
 
-        .body-header h1 {
-            font-size: 36px;
-            color: #333333; /* Dark text */
-            margin: 0;
-        }
+.body-header p {
+    font-size: 18px;
+    color: #555555; /* Subtle neutral */
+    margin: 10px 0 0 0;
+}
 
-        .body-header p {
-            font-size: 18px;
-            color: #555555; /* Subtle neutral */
-            margin: 10px 0 0 0;
-        }
+/* Main styles */
+main {
+    flex: 1; /* Pushes footer to the bottom */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
 
-        /* Main styles */
-        main {
-            flex: 1; /* Pushes footer to the bottom */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
+.image-container {
+    max-width: 400px;
+    max-height: 400px;
+    position: relative;
+}
 
-        .image-container {
-            max-width: 400px;
-            max-height: 400px;
-            position: relative;
-        }
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
 
-        .image-container img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
-        }
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #ffffff; /* White */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
 
-        /* Footer styles */
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #ffffff; /* White */
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-            width: 100%;
-        }
-
-        footer img {
-            height: 100px;
-        }
+footer img {
+    height: 100px;
+}
     </style>
 </head>
 <body>

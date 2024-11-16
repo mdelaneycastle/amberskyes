@@ -21,18 +21,17 @@
         /* Sticky header styles */
 
         header {
-            position: sticky;
-            top: 0;
-            display: flex;
-            align-items: center;
-            padding: 10px 40px; /* Adjust padding */
-            background-color: #ffffff; /* White */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            width: 100%;
-        }
-        
-    header img {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures space between logo and nav */
+    padding: 10px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 100%;
+}
+
+header img {
     height: 100px;
     margin-left: 100px; /* Logo 100px from the left */
 }
@@ -40,9 +39,8 @@
 nav {
     display: flex;
     gap: 30px; /* Space between menu items */
-    margin-right: 100px; /* Push menu to the far right */
+    margin-right: 100px; /* Menu 100px from the right edge */
 }
-
 nav a {
     text-decoration: none;
     color: #333333; /* Default text color */

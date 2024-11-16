@@ -4,101 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Petrona:wght@400;700&display=swap" rel="stylesheet">
-
     <title>Amber Sykes Art</title>
     <style>
         /* General styles */
         body {
-            font-family: 'Petrona', serif;
+            font-family: 'Petrona', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9ecec; /* Pastel version of pink */
+            background-color: #f9ecec; /* Pastel pink */
             color: #333;
         }
 
         /* Header styles */
         header {
-            font-family: 'Petrona', serif;
-            position: sticky;
-            top: 0;
+            text-align: center;
+            padding: 20px 10px;
+            background-color: #ffffff;
+        }
+
+        header h1 {
+            font-size: 36px;
+            font-family: 'Arial', sans-serif; /* San-serif font for header */
+            margin: 0;
+        }
+
+        header p {
+            font-size: 18px;
+            font-family: 'Arial', sans-serif; /* San-serif font for tagline */
+            margin: 5px 0 0 0;
+        }
+
+        /* Body styles */
+        main {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            padding: 10px 20px;
-            background-color: #ffff; /* Pastel pink */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
+            padding: 20px;
         }
 
-        header img {
-            height: 100px;
+        .image-container {
+            max-width: 400px;
+            max-height: 400px;
+            position: relative;
         }
 
-        nav {
-            display: flex;
-            gap: 20px;
-        }
-
-       
-            nav a {
-    text-decoration: none;
-    color: #5a5a5a;
-    font-family: 'Petrona', serif;
-    font-weight: bold;
-    font-size: 32px; /* Adjusted font size */
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-
-        }
-
-        nav a:hover {
-            font-family: 'Petrona', serif;
-            background-color: #f2bcbc; /* Slightly darker pastel */
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
         }
 
         /* Footer styles */
         footer {
             text-align: center;
             padding: 20px 0;
-            background-color: #fff;
-            margin-top: 20px;
+            background-color: #f8d7d7; /* Pastel pink */
         }
 
         footer img {
             height: 50px;
         }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                align-items: flex-end;
-            }
-
-            nav a {
-                padding: 10px 0;
-            }
-        }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <!-- Logo on the left -->
-        <img src="pink-website-logo-1.png" alt="Amber Sykes Art Logo">
-        <!-- Navigation menu -->
-        <nav>
-            <a href="about.html">About</a>
-            <a href="artwork.html">Artwork</a>
-            <a href="contact.html">Contact</a>
-            <a href="reviews.html">Reviews</a>
-        </nav>
+        <h1>Amber Sykes</h1>
+        <p>UK-based abstract artist, Amber Sykes, is inspired by the beauty of authentic expression.</p>
     </header>
 
-    <!-- Main content (example placeholder) -->
+    <!-- Main content -->
     <main>
-        <h1>Welcome to Amber Sykes Art</h1>
-        <p>Discover the beauty of vibrant and professional artistry.</p>
+        <div class="image-container">
+            <img src="AmberHome.jpg" alt="Amber Sykes Artwork">
+        </div>
     </main>
 
     <!-- Footer -->

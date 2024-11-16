@@ -13,6 +13,9 @@
             padding: 0;
             background-color: #f9ecec; /* Pastel pink */
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         /* Header styles */
@@ -34,8 +37,9 @@
             margin: 5px 0 0 0;
         }
 
-        /* Body styles */
+        /* Main styles */
         main {
+            flex: 1; /* Pushes footer to the bottom */
             display: flex;
             justify-content: center;
             align-items: center;

@@ -19,41 +19,30 @@
         }
 
         /* Sticky header styles */
-        header {
-            position: sticky;
-            top: 0;
-            display: flex;
-            align-items: center;
-            padding: 10px 40px; /* Adjust padding */
-            background-color: #ffffff; /* White */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            width: 100%;
-        }
+    header img {
+    height: 100px;
+    margin-left: 100px; /* Logo 100px from the left */
+}
 
-        header img {
-            height: 100px;
-            margin-left:100px;
-        }
+nav {
+    display: flex;
+    gap: 30px; /* Space between menu items */
+    margin-left: auto; /* Push menu to the far right */
+}
 
-        nav {
-            display: flex;
-            gap: 30px; /* Space between menu items */
-             /* Push menu to the far right */
-        }
+nav a {
+    text-decoration: none;
+    color: #333333; /* Default text color */
+    font-family: 'Petrona', serif;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* Removed margin-right */
+}
 
-        nav a {
-            text-decoration: none;
-            color: #333333; /* Default text color */
-            font-family: 'Petrona', serif;
-            font-weight: bold;
-            font-size: 18px;
-            position: relative;
-            overflow: hidden;
-            background-clip: text;
-            -webkit-background-clip: text;
-            margin-right:100px;
-        }
 
         nav a:hover {
             color: #ff007f; /* Bright pink */

@@ -11,7 +11,7 @@
             font-family: 'Petrona', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fff; /* Vibrant pastel pink-purple */
+            background-color: #ffffff; /* White background */
             color: #333;
             display: flex;
             flex-direction: column;
@@ -48,16 +48,22 @@
             font-weight: bold;
             font-size: 18px;
             position: relative;
+            overflow: hidden;
             background-clip: text;
             -webkit-background-clip: text;
-            transition: background 0.5s linear; /* Smooth gradient effect */
         }
 
         nav a:hover {
-            background: linear-gradient(90deg, #ff6f61, #ffb830, #2eb872);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            color: transparent; /* Make the gradient visible as text */
+            color: #ff007f; /* Bright pink */
+        }
+
+        nav a span {
+            display: inline-block;
+            transition: color 0.5s ease;
+        }
+
+        nav a:hover span {
+            color: #ff007f; /* Gradual transition to bright pink */
         }
 
         /* Body header styles */
@@ -70,13 +76,13 @@
         .body-header h1 {
             font-size: 36px;
             font-family: 'Arial', sans-serif;
-            color: #ff6f61; /* Vibrant coral */
+            color: #333333; /* Dark text */
             margin: 0;
         }
 
         .body-header p {
             font-size: 18px;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Arial', sans-serif';
             color: #555555; /* Subtle neutral */
             margin: 10px 0 0 0;
         }
@@ -116,6 +122,16 @@
             height: 100px;
         }
 
+        /* Add hover animation for text color */
+        nav a:hover span:nth-child(1) { transition-delay: 0s; }
+        nav a:hover span:nth-child(2) { transition-delay: 0.1s; }
+        nav a:hover span:nth-child(3) { transition-delay: 0.2s; }
+        nav a:hover span:nth-child(4) { transition-delay: 0.3s; }
+        nav a:hover span:nth-child(5) { transition-delay: 0.4s; }
+        nav a:hover span:nth-child(6) { transition-delay: 0.5s; }
+        nav a:hover span:nth-child(7) { transition-delay: 0.6s; }
+        nav a:hover span:nth-child(8) { transition-delay: 0.7s; }
+
         /* Responsive design */
         @media (max-width: 768px) {
             nav {
@@ -134,10 +150,10 @@
     <header>
         <img src="pink-website-logo-1.png" alt="Amber Sykes Art Logo">
         <nav>
-            <a href="about.html">About</a>
-            <a href="artwork.html">Artwork</a>
-            <a href="contact.html">Contact</a>
-            <a href="reviews.html">Reviews</a>
+            <a href="about.html"><span>A</span><span>b</span><span>o</span><span>u</span><span>t</span></a>
+            <a href="artwork.html"><span>A</span><span>r</span><span>t</span><span>w</span><span>o</span><span>r</span><span>k</span></a>
+            <a href="contact.html"><span>C</span><span>o</span><span>n</span><span>t</span><span>a</span><span>c</span><span>t</span></a>
+            <a href="reviews.html"><span>R</span><span>e</span><span>v</span><span>i</span><span>e</span><span>w</span><span>s</span></a>
         </nav>
     </header>
 

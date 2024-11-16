@@ -22,7 +22,7 @@
         header {
             display: flex;
             align-items: center;
-            justify-content: space-between; /* Ensures space between logo and nav */
+            justify-content: space-between;
             padding: 10px 40px;
             background-color: #ffffff;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -32,13 +32,11 @@
 
         header img {
             height: 100px;
-            margin-left: 100px; /* Logo 100px from the left */
         }
 
         nav {
             display: flex;
             gap: 30px; /* Space between menu items */
-            margin-right: 100px; /* Menu 100px from the right edge */
         }
 
         nav a {
@@ -47,23 +45,10 @@
             font-family: 'Petrona', serif;
             font-weight: bold;
             font-size: 18px;
-            position: relative;
-            overflow: hidden;
-            background-clip: text;
-            -webkit-background-clip: text;
         }
 
         nav a:hover {
             color: #ff007f; /* Bright pink */
-        }
-
-        nav a span {
-            display: inline-block;
-            transition: color 0.5s ease;
-        }
-
-        nav a:hover span {
-            color: #ff007f; /* Gradual transition to bright pink */
         }
 
         /* Burger menu styles */
@@ -77,35 +62,47 @@
         }
 
         @media (max-width: 768px) {
+            header {
+                flex-direction: column; /* Stack elements */
+                align-items: center; /* Center align elements */
+                text-align: center;
+                padding: 20px;
+            }
+
+            header img {
+                margin-bottom: 10px;
+            }
+
             #menu-toggle {
                 display: block; /* Show burger menu in mobile view */
-                margin-right: 20px;
+                margin-bottom: 10px;
             }
 
             nav {
                 display: none; /* Hide navigation menu by default */
                 flex-direction: column;
                 gap: 15px;
-                position: absolute;
-                top: 100px; /* Adjust based on header height */
-                right: 20px;
+                align-items: center;
+                width: 100%;
                 background: white;
-                padding: 10px 20px;
-                border-radius: 5px;
+                padding: 10px 0;
                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
             }
 
             nav.show {
                 display: flex; /* Show navigation menu when toggled */
             }
 
-            header {
-                flex-direction: column; /* Stack logo and menu button */
-                align-items: flex-start;
+            nav a {
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+                border-bottom: 1px solid #f0f0f0;
             }
 
-            header img {
-                margin: 10px 20px; /* Adjust logo margin */
+            nav a:last-child {
+                border-bottom: none; /* Remove border from last item */
             }
         }
 
@@ -118,14 +115,12 @@
 
         .body-header h1 {
             font-size: 36px;
-            font-family: 'Arial', sans-serif;
             color: #333333; /* Dark text */
             margin: 0;
         }
 
         .body-header p {
             font-size: 18px;
-            font-family: 'Arial', sans-serif';
             color: #555555; /* Subtle neutral */
             margin: 10px 0 0 0;
         }
@@ -172,10 +167,10 @@
         <img src="pink-website-logo-1.png" alt="Amber Sykes Art Logo">
         <button id="menu-toggle" aria-label="Toggle menu">☰</button>
         <nav id="nav-menu">
-            <a href="about.html"><span>A</span><span>b</span><span>o</span><span>u</span><span>t</span></a>
-            <a href="artwork.html"><span>A</span><span>r</span><span>t</span><span>w</span><span>o</span><span>r</span><span>k</span></a>
-            <a href="contact.html"><span>C</span><span>o</span><span>n</span><span>t</span><span>a</span><span>c</span><span>t</span></a>
-            <a href="reviews.html"><span>R</span><span>e</span><span>v</span><span>i</span><span>e</span><span>w</span><span>s</span></a>
+            <a href="about.html">About</a>
+            <a href="artwork.html">Artwork</a>
+            <a href="contact.html">Contact</a>
+            <a href="reviews.html">Reviews</a>
         </nav>
     </header>
 

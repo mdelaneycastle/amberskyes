@@ -226,39 +226,37 @@ nav a:hover span:nth-child(8) { transition-delay: 0.7s; }
     </section>
 
     <!-- Section for Instagram Carousel -->
-    <section id="instagram-carousel" style="text-align: center; padding: 40px; width: 100%; max-width: 500px;">
-        <img src="Instagram-logo.png" alt="Instagram Logo" style="width: 50px; margin-bottom: 20px;">
+    <section id="instagram-carousel" style="text-align: center; padding: 40px; width: 100%; max-width: 500px; position: relative;">
+        <img src="Instagram-logo.png" alt="Instagram Logo" style="width: 50px; position: absolute; top: -30px; left: 50%; transform: translateX(-50%); z-index: 2;">
         <div style="position: relative; width: 100%; overflow: hidden;">
             <!-- Image container -->
             <div id="carousel-images" style="display: flex; transition: transform 0.5s ease;">
                 <!-- First Post -->
                 <div class="carousel-item" style="min-width: 100%; position: relative;">
-                    <img src="insta1.jpg" alt="Post 1" style="width: 100%; border-radius: 10px;">
-                    <div class="caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.5); color: #fff; text-align: center; padding: 10px; font-size: 16px; opacity: 0; transition: opacity 0.3s;">
-                        <a href="https://www.instagram.com/p/DAjCnBhIHpK/" target="_blank" style="color: #fff; text-decoration: none;">View on Instagram</a>
-                    </div>
+                    <a href="https://www.instagram.com/p/DAjCnBhIHpK/" target="_blank">
+                        <img src="insta1.jpg" alt="Post 1" style="width: 100%; border-radius: 10px;">
+                    </a>
                 </div>
                 <!-- Second Post -->
                 <div class="carousel-item" style="min-width: 100%; position: relative;">
-                    <img src="insta2.jpg" alt="Post 2" style="width: 100%; border-radius: 10px;">
-                    <div class="caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.5); color: #fff; text-align: center; padding: 10px; font-size: 16px; opacity: 0; transition: opacity 0.3s;">
-                        <a href="https://www.instagram.com/p/DCC2zlcuf5i/" target="_blank" style="color: #fff; text-decoration: none;">View on Instagram</a>
-                    </div>
+                    <a href="https://www.instagram.com/p/DCC2zlcuf5i/" target="_blank">
+                        <img src="insta2.jpg" alt="Post 2" style="width: 100%; border-radius: 10px;">
+                    </a>
                 </div>
                 <!-- Third Post -->
                 <div class="carousel-item" style="min-width: 100%; position: relative;">
-                    <img src="insta3.jpg" alt="Post 3" style="width: 100%; border-radius: 10px;">
-                    <div class="caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.5); color: #fff; text-align: center; padding: 10px; font-size: 16px; opacity: 0; transition: opacity 0.3s;">
-                        <a href="https://www.instagram.com/p/DBR3qEmulPe/" target="_blank" style="color: #fff; text-decoration: none;">View on Instagram</a>
-                    </div>
+                    <a href="https://www.instagram.com/p/DBR3qEmulPe/" target="_blank">
+                        <img src="insta3.jpg" alt="Post 3" style="width: 100%; border-radius: 10px;">
+                    </a>
                 </div>
             </div>
             <!-- Navigation buttons -->
-            <button id="prev-btn" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background-color: #333; color: #fff; border: none; border-radius: 50%; width: 60px; height: 60px; cursor: pointer; outline: none; z-index: 10; font-size: 24px; box-shadow: 0 0 10px #fff;">←</button>
-            <button id="next-btn" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background-color: #333; color: #fff; border: none; border-radius: 50%; width: 60px; height: 60px; cursor: pointer; outline: none; z-index: 10; font-size: 24px; box-shadow: 0 0 10px #fff;">→</button>
+            <button id="prev-btn" style="position: absolute; top: 50%; left: -50px; transform: translateY(-50%); background-color: #333; color: #fff; border: none; border-radius: 50%; width: 60px; height: 60px; cursor: pointer; outline: none; z-index: 10; font-size: 24px; box-shadow: 0 0 10px #fff;">←</button>
+            <button id="next-btn" style="position: absolute; top: 50%; right: -50px; transform: translateY(-50%); background-color: #333; color: #fff; border: none; border-radius: 50%; width: 60px; height: 60px; cursor: pointer; outline: none; z-index: 10; font-size: 24px; box-shadow: 0 0 10px #fff;">→</button>
         </div>
     </section>
 </main>
+
 
 
 

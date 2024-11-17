@@ -227,8 +227,10 @@ nav a:hover span:nth-child(8) { transition-delay: 0.7s; }
 
     <!-- Section for Instagram Carousel -->
     <section id="instagram-carousel" style="text-align: center; padding: 40px; width: 100%; max-width: 500px; position: relative;">
-        <img src="Instagram-logo.png" alt="Instagram Logo" style="width: 50px; position: absolute; top: -30px; left: 50%; transform: translateX(-50%); z-index: 2;">
-        <div style="position: relative; width: 100%; overflow: hidden;">
+        <!-- Instagram Logo Positioned Over Carousel -->
+        <img src="Instagram-logo.png" alt="Instagram Logo" style="width: 50px; position: absolute; top: 10px; left: 50%; transform: translate(-50%, -50%); z-index: 2;">
+
+        <div style="position: relative; width: 100%; overflow: hidden; margin-top: 30px;">
             <!-- Image container -->
             <div id="carousel-images" style="display: flex; transition: transform 0.5s ease;">
                 <!-- First Post -->
@@ -256,6 +258,7 @@ nav a:hover span:nth-child(8) { transition-delay: 0.7s; }
         </div>
     </section>
 </main>
+
 
 
 

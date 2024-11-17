@@ -217,18 +217,18 @@ nav a:hover span:nth-child(8) { transition-delay: 0.7s; }
     </div>
 
     <!-- Main content -->
-  <main>
+  <main style="display: flex; flex-direction: column; align-items: center;">
     <!-- Section for Amber's Artwork Image -->
-    <section id="amber-artwork" style="text-align: center; padding: 40px 20px;">
+    <section id="amber-artwork" style="text-align: center; padding: 40px 20px; width: 100%;">
         <div class="image-container" style="max-width: 400px; margin: 0 auto;">
             <img src="AmberWithArt.jpg" alt="Amber Sykes Artwork" style="width: 100%; border-radius: 10px; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);">
         </div>
     </section>
 
     <!-- Section for Instagram Carousel -->
-    <section id="instagram-carousel" style="text-align: center; padding: 40px;">
+    <section id="instagram-carousel" style="text-align: center; padding: 40px; width: 100%; max-width: 500px;">
         <img src="Instagram-logo.png" alt="Instagram Logo" style="width: 50px; margin-bottom: 20px;">
-        <div style="position: relative; width: 100%; max-width: 500px; margin: 0 auto; overflow: hidden;">
+        <div style="position: relative; width: 100%; overflow: hidden;">
             <!-- Image container -->
             <div id="carousel-images" style="display: flex; transition: transform 0.5s ease;">
                 <!-- First Post -->
@@ -254,11 +254,12 @@ nav a:hover span:nth-child(8) { transition-delay: 0.7s; }
                 </div>
             </div>
             <!-- Navigation buttons -->
-            <button id="prev-btn" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background-color: #333; color: #fff; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; outline: none; z-index: 10; font-size: 20px;">←</button>
-            <button id="next-btn" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background-color: #333; color: #fff; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; outline: none; z-index: 10; font-size: 20px;">→</button>
+            <button id="prev-btn" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background-color: #333; color: #fff; border: none; border-radius: 50%; width: 60px; height: 60px; cursor: pointer; outline: none; z-index: 10; font-size: 24px; box-shadow: 0 0 10px #fff;">←</button>
+            <button id="next-btn" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background-color: #333; color: #fff; border: none; border-radius: 50%; width: 60px; height: 60px; cursor: pointer; outline: none; z-index: 10; font-size: 24px; box-shadow: 0 0 10px #fff;">→</button>
         </div>
     </section>
 </main>
+
 
 
 

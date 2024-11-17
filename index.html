@@ -61,6 +61,9 @@ nav a span {
         nav a:hover span {
     color: #ff007f; /* Change color on hover */
 }
+        .carousel-item:hover .caption {
+    opacity: 1;
+}
 
 /* Hover effects */
 nav a:hover span:nth-child(1) { transition-delay: 0s; }
@@ -261,5 +264,41 @@ nav a:hover span:nth-child(8) { transition-delay: 0.7s; }
         });
     </script>
     <script async src="//www.instagram.com/embed.js"></script>
+    <script>
+    const images = document.querySelectorAll("#carousel-images .carousel-item");
+    const carousel = document.getElementById("carousel-images");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        const offset = -currentIndex * 100; // Move carousel by 100% per index
+        carousel.style.transform = `translateX(${offset}%)`;
+    }
+
+    function showCaption(index) {
+        images.forEach((item, idx) => {
+            const caption = item.querySelector(".caption");
+            caption.style.opacity = idx === index ? "1" : "0";
+        });
+    }
+
+    prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+        updateCarousel();
+        showCaption(currentIndex);
+    });
+
+    nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+        updateCarousel();
+        showCaption(currentIndex);
+    });
+
+    // Show the caption for the first image
+    showCaption(currentIndex);
+</script>
+
 </body>
 </html>

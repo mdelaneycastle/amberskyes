@@ -225,6 +225,7 @@ nav a:hover span:nth-child(8) { transition-delay: 0.7s; }
         </div>
     </section>
 
+   
     <!-- Section for Instagram Carousel -->
     <section id="instagram-carousel" style="text-align: center; padding: 40px; width: 100%; max-width: 500px; position: relative;">
         <!-- Instagram Logo -->
@@ -275,32 +276,28 @@ nav a:hover span:nth-child(8) { transition-delay: 0.7s; }
     </script>
     <script async src="//www.instagram.com/embed.js"></script>
  <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const navMenu = document.getElementById('nav-menu');
-        const carousel = document.getElementById('carousel-images');
-        const prevBtn = document.getElementById('prev-btn');
-        const nextBtn = document.getElementById('next-btn');
-        let currentIndex = 0;
+    const images = document.querySelectorAll("#carousel-images .carousel-item");
+    const carousel = document.getElementById("carousel-images");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
 
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('show');
-        });
+    let currentIndex = 0;
 
-        function updateCarousel() {
-            const offset = -currentIndex * 100;
-            carousel.style.transform = translateX(${offset}%);
-        }
+    function updateCarousel() {
+        const offset = -currentIndex * 100; // Move carousel by 100% per index
+        carousel.style.transform = translateX(${offset}%);
+    }
 
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : 2; // Adjust for three images
-            updateCarousel();
-        });
+    prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+        updateCarousel();
+    });
 
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex < 2) ? currentIndex + 1 : 0; // Adjust for three images
-            updateCarousel();
-        });
-    </script>
+    nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+        updateCarousel();
+    });
+</script>
 
 
 

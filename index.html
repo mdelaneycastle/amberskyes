@@ -276,28 +276,37 @@ nav a:hover span:nth-child(8) { transition-delay: 0.7s; }
     </script>
     <script async src="//www.instagram.com/embed.js"></script>
  <script>
-    const images = document.querySelectorAll("#carousel-images .carousel-item");
-    const carousel = document.getElementById("carousel-images");
-    const prevBtn = document.getElementById("prev-btn");
-    const nextBtn = document.getElementById("next-btn");
-
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const carousel = document.getElementById('carousel-images');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
     let currentIndex = 0;
 
+    // Toggle menu visibility
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+    });
+
+    // Function to update carousel position
     function updateCarousel() {
-        const offset = -currentIndex * 100; // Move carousel by 100% per index
-        carousel.style.transform = translateX(${offset}%);
+        const offset = -currentIndex * 100; // Moves by 100% for each image
+        carousel.style.transform = `translateX(${offset}%)`;
     }
 
-    prevBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+    // Event listener for previous button
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : 2; // Loop to last image
         updateCarousel();
     });
 
-    nextBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+    // Event listener for next button
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex < 2) ? currentIndex + 1 : 0; // Loop to first image
         updateCarousel();
     });
 </script>
+
 
 
 

@@ -277,30 +277,37 @@ nav a:hover span:nth-child(8) { transition-delay: 0.7s; }
     <script async src="//www.instagram.com/embed.js"></script>
  <script>
         const menuToggle = document.getElementById('menu-toggle');
-        const navMenu = document.getElementById('nav-menu');
-        const carousel = document.getElementById('carousel-images');
-        const prevBtn = document.getElementById('prev-btn');
-        const nextBtn = document.getElementById('next-btn');
-        let currentIndex = 0;
+const navMenu = document.getElementById('nav-menu');
+const carousel = document.getElementById('carousel-images');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+let currentIndex = 0;
 
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('show');
-        });
+menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+});
 
-        function updateCarousel() {
-            const offset = -currentIndex * 100;
-            carousel.style.transform = `translateX(${offset}%)`;
+function updateCarousel() {
+    const offset = -currentIndex * 100;
+    carousel.style.transform = `translateX(${offset}%)`;
+}
+
+const instagramCarousel = document.getElementById('instagram-carousel'); // Select the carousel container
+
+instagramCarousel.addEventListener('click', (event) => {
+    // Check if the clicked element has the desired ID
+    if (event.target.id === 'prev-btn' || event.target.id === 'next-btn') {
+        const button = event.target; // Get the button element that was clicked
+        if (button.id === 'prev-btn') {
+            // Handle previous button click
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : 2;  // Adjust for three images
+        } else {
+            // Handle next button click
+            currentIndex = (currentIndex < 2) ? currentIndex + 1 : 0;  // Adjust for three images
         }
-
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : 2; // Adjust for three images
-            updateCarousel();
-        });
-
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex < 2) ? currentIndex + 1 : 0; // Adjust for three images
-            updateCarousel();
-        });
+        updateCarousel();
+    }
+});
     </script>
 
 
